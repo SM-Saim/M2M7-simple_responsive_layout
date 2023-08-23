@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>responsive img</title>
+    <style>
+      body {
+        border: 1px solid red;
+        max-width: 1140px;
+        margin: 0 auto;
+        /* top, bottom e 0 .ar legt, right e auto */
+      }
+      .image-container {
+        display: flex;
+      }
+      .image-container img {
+        width: 100%;
+      }
+      .image-container div {
+        width: 50%;
+      }
+      @media screen and (max-width: 576px) {
+        .image-container {
+          flex-direction: column-reverse;
+        }
+        .image-container div {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img src="image/image.jpg" alt="" />
+    <!-- image flouid  -->
+
+    <div class="image-container">
+      <div>
+        <img src="image/image.jpg" alt="" />
+      </div>
+      <div>
+        <img src="image/spiderman.webp" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
